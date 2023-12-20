@@ -1,7 +1,12 @@
+import Navbar from "@/components/navbar/Navbar";
 import React from "react";
 
 const page = () => {
-  return <div>Admin Page</div>;
+  return (
+    <>
+      <Navbar />
+    </>
+  );
 };
 
 export default page;
