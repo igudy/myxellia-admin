@@ -2,13 +2,13 @@ import { Box, Container, Flex, HStack, Text } from "@chakra-ui/react";
 import Image from "next/image";
 import React from "react";
 
-import MainStone from "../../../public/icons/mainstone.svg";
-import Veerge from "../../../public/icons/veerge.svg";
-import Calendar from "../../../public/icons/nav-calendar.svg";
-import Dropdown from "../../../public/icons/dropdown.svg";
-import Notification from "../../../public/icons/notification.svg";
-import Plus from "../../../public/icons/plus.svg";
-import User from "../../../public/icons/user.svg";
+import MainStone from "../../../public/images/icons/mainstone.svg";
+import Veerge from "../../../public/images/icons/veerge.svg";
+import Calendar from "../../../public/images/icons/nav-calendar.svg";
+import Dropdown from "../../../public/images/icons/dropdown.svg";
+import Notification from "../../../public/images/icons/notification.svg";
+import Plus from "../../../public/images/icons/plus.svg";
+import User from "../../../public/images/icons/user.svg";
 
 const Navbar = () => {
   return (

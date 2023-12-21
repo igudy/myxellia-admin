@@ -1,7 +1,7 @@
 import { Box, Flex, Text } from "@chakra-ui/react";
 import Image from "next/image";
 import React from "react";
-import Hand from "../../../public/icons/hand.svg";
+import Hand from "../../../public/images/icons/hand.svg";
 
 interface WelcomeProps {}
 

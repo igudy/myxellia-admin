@@ -1,9 +1,9 @@
-import Calendar from "../../../public/icons/calendar.svg";
-import Home from "../../../public/icons/home.svg";
-import Location from "../../../public/icons/location.svg";
-import Profile from "../../../public/icons/profile.svg";
-import Settings from "../../../public/icons/settings.svg";
-import Wallet from "../../../public/icons/wallet.svg";
+import Calendar from "../../../public/images/icons/calendar.svg";
+import Home from "../../../public/images/icons/home.svg";
+import Location from "../../../public/images/icons/location.svg";
+import Profile from "../../../public/images/icons/profile.svg";
+import Settings from "../../../public/images/icons/settings.svg";
+import Wallet from "../../../public/images/icons/wallet.svg";
 
 export const secondNav = () => [
   {

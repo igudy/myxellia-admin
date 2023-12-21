@@ -1,3 +1,4 @@
+"use client";
 import {
   Box,
   Flex,
@@ -9,15 +10,29 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import LineChartComponent from "./LineChart";
+import OverViewProps from "../ui/OverViewProps";
+import upGreen from "../../../public/images/icons/upGreen.svg";
+import upRed from "../../../public/images/icons/upRed.svg";
+import House from "../../../public/images/icons/house.svg";
+import Profile from "../../../public/images/icons/profileP.svg";
+import { PropertyCard } from "../ui/Card";
+import Image from "next/image";
+import { ChevronRightIcon } from "@chakra-ui/icons";
 
 interface OverviewProps {}
 
 const Overview = ({}: OverviewProps) => {
   return (
-    <Box margin="6" padding="5" paddingY="10" bg="white" rounded="full">
+    <Box padding="5" paddingY="10" m="10">
       {/* Sales Overview */}
-      <Flex>
-        <Box padding="4" width="800px">
+      <Flex gap={"3"}>
+        <Box
+          padding="4"
+          width="850px"
+          bg={"white"}
+          rounded={"lg"}
+          boxShadow={"xl"}
+        >
           <Flex justify="space-between">
             <Box>
               <Text fontWeight="bold">Sales Overview</Text>
@@ -46,22 +61,121 @@ const Overview = ({}: OverviewProps) => {
           <Box width="full" height="2px" opacity="50" bg="gray.100"></Box>
 
           {/* Line Chart */}
-          <LineChartComponent />
-        </Box>
-
-        {/* Property Overview */}
-        <Box>
-          <Flex direction={"column"}>
+          <Flex align="center" gap={"2"}>
+            <LineChartComponent />
             <Box>
-              <Text>Property Overview</Text>
-            </Box>
-            <Box>
-              <Text>Customers Overview</Text>
+              <Flex>
+                <Box>
+                  <OverViewProps
+                    price={"₦ 0.00"}
+                    tag={"Balance"}
+                    imageProp={upGreen}
+                    percentage={"0%"}
+                    color={"purple"}
+                  />
+                </Box>
+                <Box>
+                  <OverViewProps
+                    price={"₦ 0.00"}
+                    tag={"Deposit"}
+                    imageProp={upGreen}
+                    percentage={"0%"}
+                    color={"green"}
+                  />
+                </Box>
+              </Flex>
+              <Flex>
+                <Box>
+                  {" "}
+                  <OverViewProps
+                    price={"₦ 0.00"}
+                    tag={"Purchase"}
+                    imageProp={upGreen}
+                    percentage={"0%"}
+                    color={"black"}
+                  />
+                </Box>
+                <Box>
+                  {" "}
+                  <OverViewProps
+                    price={"₦ 0.00"}
+                    tag={"Withdrawal"}
+                    imageProp={upRed}
+                    percentage={"0%"}
+                    color={"red"}
+                  />
+                </Box>
+              </Flex>
             </Box>
           </Flex>
         </Box>
 
-        {/* Customers Overview */}
+        {/* Property Overview */}
+        <Box>
+          <Flex direction={"column"} gap={"10"}>
+            <Box
+              width={"400"}
+              minW={"400"}
+              bg="white"
+              p="5"
+              rounded={"lg"}
+              boxShadow="lg"
+            >
+              <Flex justify={"space-between"}>
+                <Flex marginY={"3"} fontWeight={"bold"} gap="2 ">
+                  <Image src={House} alt="house" />
+                  <Text>Property Overview</Text>
+                </Flex>
+                <Box>
+                  <Flex align={"center"}>
+                    <Text fontSize={"sm"}>View all</Text>
+                    <ChevronRightIcon boxSize={6} color="gray.300" />
+                  </Flex>
+                </Box>
+              </Flex>
+              <Box>
+                <Flex>
+                  <PropertyCard value={"0"} avaliability="Total" />
+                  <PropertyCard value={"0"} avaliability="Availiable" />
+                  <PropertyCard value={"0"} avaliability="Sold Out" />
+                </Flex>
+              </Box>
+            </Box>
+
+            {/* Customers Overview */}
+            <Box>
+              <Box
+                width={"400"}
+                minW={"400"}
+                bg="white"
+                p="5"
+                rounded={"lg"}
+                boxShadow="lg"
+              >
+                <Flex justify={"space-between"}>
+                  <Flex marginY={"3"} fontWeight={"bold"} gap="2 ">
+                    <Image src={Profile} alt="house" />
+                    <Text>Customers Overview</Text>
+                  </Flex>
+                  <Box>
+                    <Flex align={"center"}>
+                      <Text fontSize={"sm"}>View all</Text>
+                      <ChevronRightIcon boxSize={6} color="gray.300" />
+                    </Flex>
+                  </Box>
+                </Flex>
+                <Box>
+                  <Flex>
+                    <PropertyCard value={"0"} avaliability="Total" />
+                    <PropertyCard value={"0"} avaliability="New" />
+                    <PropertyCard value={"0"} avaliability="Active" />
+                    <PropertyCard value={"0"} avaliability="Inactive" />
+                  </Flex>
+                </Box>
+              </Box>
+            </Box>
+          </Flex>
+        </Box>
       </Flex>
     </Box>
   );
