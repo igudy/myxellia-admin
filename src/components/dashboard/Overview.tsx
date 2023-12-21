@@ -15,6 +15,8 @@ import upGreen from "../../../public/images/icons/upGreen.svg";
 import upRed from "../../../public/images/icons/upRed.svg";
 import House from "../../../public/images/icons/house.svg";
 import Profile from "../../../public/images/icons/profileP.svg";
+import BlankImage from "../../../public/images/icons/blankImage.svg";
+import Bookmark from "../../../public/images/icons/bookmark.svg";
 import { PropertyCard } from "../ui/Card";
 import Image from "next/image";
 import { ChevronRightIcon } from "@chakra-ui/icons";
@@ -152,7 +154,7 @@ const Overview = ({}: OverviewProps) => {
                 rounded={"lg"}
                 boxShadow="lg"
               >
-                <Flex justify={"space-between"}>
+                <Flex justify={"spac e-between"}>
                   <Flex marginY={"3"} fontWeight={"bold"} gap="2 ">
                     <Image src={Profile} alt="house" />
                     <Text>Customers Overview</Text>
@@ -168,13 +170,140 @@ const Overview = ({}: OverviewProps) => {
                   <Flex>
                     <PropertyCard value={"0"} avaliability="Total" />
                     <PropertyCard value={"0"} avaliability="New" />
-                    <PropertyCard value={"0"} avaliability="Active" />
+                    <PropertyCard value={"0"} avaliability="A ctive" />
                     <PropertyCard value={"0"} avaliability="Inactive" />
                   </Flex>
                 </Box>
               </Box>
             </Box>
           </Flex>
+        </Box>
+      </Flex>
+
+      {/* Lisiting Overview */}
+
+      <Flex gap={"5"} marginY={"10"}>
+        <Box
+          padding="4"
+          width="350px"
+          bg={"white"}
+          rounded={"lg"}
+          boxShadow={"xl"}
+        >
+          <Text fontSize={"10"} fontWeight={"fontbold"}>
+            Listing Overview
+          </Text>
+          <Flex>
+            <Box>
+              <Flex direction={"column"}>
+                <Flex direction={"column"}>
+                  Most Viewed
+                  <Box w={"1"} h={"1"}></Box>
+                  <Flex align="center" gap="3">
+                    <Flex
+                      align={"center"}
+                      justify={"center"}
+                      bg={"gray.100"}
+                      w={"100px"}
+                      h={"100px"}
+                      rounded={"lg"}
+                      border={"1px"}
+                      borderColor={"green"}
+                    >
+                      <Image
+                        src={BlankImage}
+                        width={"50"}
+                        height={"50"}
+                        alt="empty"
+                      />
+                    </Flex>
+                    <Text fontWeight={"bold"} mb={"10"}>
+                      None
+                    </Text>
+                  </Flex>
+                </Flex>
+
+                <Flex direction={"column"}>
+                  Most watchlisted
+                  <Box w={"1"} h={"1"}></Box>
+                  <Flex align="center" gap="3">
+                    <Flex
+                      align={"center"}
+                      justify={"center"}
+                      bg={"gray.100"}
+                      w={"100px"}
+                      h={"100px"}
+                      rounded={"lg"}
+                      border={"1px"}
+                      borderColor={"red"}
+                    >
+                      <Image
+                        src={BlankImage}
+                        width={"50"}
+                        height={"50"}
+                        alt="empty"
+                      />
+                    </Flex>
+                    <Text fontWeight={"bold"} mb={"10"}>
+                      None
+                    </Text>
+                  </Flex>
+                </Flex>
+              </Flex>
+            </Box>
+
+            <Box>
+              <Flex direction={"column"}>
+                <Flex direction={"column"}>
+                  Most Shared
+                  <Box w={"1"} h={"1"}></Box>
+                  <Flex align="center" gap="3">
+                    <Flex
+                      align={"center"}
+                      justify={"center"}
+                      bg={"gray.100"}
+                      w={"100px"}
+                      h={"100px"}
+                      rounded={"lg"}
+                      border={"1px"}
+                      borderColor={"purple"}
+                    >
+                      <Image
+                        src={BlankImage}
+                        width={"50"}
+                        height={"50"}
+                        alt="empty"
+                      />
+                    </Flex>
+                    <Text fontWeight={"bold"} mb={"10"}>
+                      None
+                    </Text>
+                  </Flex>
+                </Flex>
+
+                <Flex direction={"column"}>Most Viewed</Flex>
+              </Flex>
+            </Box>
+          </Flex>
+        </Box>
+
+        <Box
+          padding="4"
+          width="350px"
+          bg={"white"}
+          rounded={"lg"}
+          boxShadow={"xl"}
+        >
+          <Text>N0.00</Text>
+        </Box>
+        <Box
+          padding="4"
+          width="350px"
+          bg={"white"}
+          rounded={"lg"}
+          boxShadow={"xl"}
+        >
+          <Text>Top Selling</Text>
         </Box>
       </Flex>
     </Box>
