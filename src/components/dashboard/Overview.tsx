@@ -7,6 +7,7 @@ import {
   InputGroup,
   Text,
   Stack,
+  border,
 } from "@chakra-ui/react";
 import React from "react";
 import LineChartComponent from "./LineChart";
@@ -20,6 +21,7 @@ import Bookmark from "../../../public/images/icons/bookmark.svg";
 import { PropertyCard } from "../ui/Card";
 import Image from "next/image";
 import { ChevronRightIcon } from "@chakra-ui/icons";
+import ListingOverview from "./ListingOverview";
 
 interface OverviewProps {}
 
@@ -181,131 +183,7 @@ const Overview = ({}: OverviewProps) => {
       </Flex>
 
       {/* Lisiting Overview */}
-
-      <Flex gap={"5"} marginY={"10"}>
-        <Box
-          padding="4"
-          width="350px"
-          bg={"white"}
-          rounded={"lg"}
-          boxShadow={"xl"}
-        >
-          <Text fontSize={"10"} fontWeight={"fontbold"}>
-            Listing Overview
-          </Text>
-          <Flex>
-            <Box>
-              <Flex direction={"column"}>
-                <Flex direction={"column"}>
-                  Most Viewed
-                  <Box w={"1"} h={"1"}></Box>
-                  <Flex align="center" gap="3">
-                    <Flex
-                      align={"center"}
-                      justify={"center"}
-                      bg={"gray.100"}
-                      w={"100px"}
-                      h={"100px"}
-                      rounded={"lg"}
-                      border={"1px"}
-                      borderColor={"green"}
-                    >
-                      <Image
-                        src={BlankImage}
-                        width={"50"}
-                        height={"50"}
-                        alt="empty"
-                      />
-                    </Flex>
-                    <Text fontWeight={"bold"} mb={"10"}>
-                      None
-                    </Text>
-                  </Flex>
-                </Flex>
-
-                <Flex direction={"column"}>
-                  Most watchlisted
-                  <Box w={"1"} h={"1"}></Box>
-                  <Flex align="center" gap="3">
-                    <Flex
-                      align={"center"}
-                      justify={"center"}
-                      bg={"gray.100"}
-                      w={"100px"}
-                      h={"100px"}
-                      rounded={"lg"}
-                      border={"1px"}
-                      borderColor={"red"}
-                    >
-                      <Image
-                        src={BlankImage}
-                        width={"50"}
-                        height={"50"}
-                        alt="empty"
-                      />
-                    </Flex>
-                    <Text fontWeight={"bold"} mb={"10"}>
-                      None
-                    </Text>
-                  </Flex>
-                </Flex>
-              </Flex>
-            </Box>
-
-            <Box>
-              <Flex direction={"column"}>
-                <Flex direction={"column"}>
-                  Most Shared
-                  <Box w={"1"} h={"1"}></Box>
-                  <Flex align="center" gap="3">
-                    <Flex
-                      align={"center"}
-                      justify={"center"}
-                      bg={"gray.100"}
-                      w={"100px"}
-                      h={"100px"}
-                      rounded={"lg"}
-                      border={"1px"}
-                      borderColor={"purple"}
-                    >
-                      <Image
-                        src={BlankImage}
-                        width={"50"}
-                        height={"50"}
-                        alt="empty"
-                      />
-                    </Flex>
-                    <Text fontWeight={"bold"} mb={"10"}>
-                      None
-                    </Text>
-                  </Flex>
-                </Flex>
-
-                <Flex direction={"column"}>Most Viewed</Flex>
-              </Flex>
-            </Box>
-          </Flex>
-        </Box>
-
-        <Box
-          padding="4"
-          width="350px"
-          bg={"white"}
-          rounded={"lg"}
-          boxShadow={"xl"}
-        >
-          <Text>N0.00</Text>
-        </Box>
-        <Box
-          padding="4"
-          width="350px"
-          bg={"white"}
-          rounded={"lg"}
-          boxShadow={"xl"}
-        >
-          <Text>Top Selling</Text>
-        </Box>
-      </Flex>
+      <ListingOverview />
     </Box>
   );
 };
