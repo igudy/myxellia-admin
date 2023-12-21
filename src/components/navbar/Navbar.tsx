@@ -13,7 +13,7 @@ import User from "../../../public/icons/user.svg";
 const Navbar = () => {
   return (
     <Box bg="black" color="white" paddingX="10" paddingY="5">
-      <Flex justify="space-between" align={"center "}>
+      <Flex justify="space-between" align="center">
         <Box>
           <Flex direction="column">
             <Image src={Veerge} sizes="50px" alt="veerge_logo" />

@@ -1,3 +1,4 @@
+"use client";
 import {
   Box,
   Flex,
@@ -29,7 +30,7 @@ const SecondNavbar = () => {
           <Box key={item.id}>
             <Flex align={"center"}>
               <Image src={item.image} width={20} height={20} alt={item.name} />
-              <Box paddingLeft={"1 "}>{item.name}</Box>
+              <Box paddingLeft={"1"}>{item.name}</Box>
             </Flex>
           </Box>
         ))}
