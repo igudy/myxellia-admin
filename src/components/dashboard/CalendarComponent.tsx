@@ -1,19 +1,27 @@
 "use client";
-import { Calendar, momentLocalizer } from "react-big-calendar";
-import moment from "moment";
+import { useState } from "react";
+import { format } from "date-fns";
 
-const localizer = momentLocalizer(moment);
+import { DayPicker } from "react-day-picker";
 
-const CalendarComponent = () => (
-  <div>
-    <Calendar
-      localizer={localizer}
-      // events={myEventsList}
-      startAccessor="start"
-      endAccessor="end"
-      style={{ height: 500 }}
-    />
-  </div>
-);
+const CalendarComponent: React.FC = () => {
+  const [selected, setSelected] = useState<Date>();
+
+  let footer = <p>Please pick a day.</p>;
+  if (selected) {
+    footer = <p>You picked {format(selected, "PP")}.</p>;
+  }
+  return (
+    <>
+      <DayPicker
+        showOutsideDays
+        captionLayout="dropdown-buttons"
+        fromYear={2015}
+        toYear={2025}
+        footer={footer}
+      />
+    </>
+  );
+};
 
 export default CalendarComponent;

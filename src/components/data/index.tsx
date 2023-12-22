@@ -1,4 +1,4 @@
-import Calendar from "../../../public/images/icons/calendar.svg";
+import Calendar from "../../../public/images/icons/calendarr.svg";
 import Home from "../../../public/images/icons/home.svg";
 import Location from "../../../public/images/icons/location.svg";
 import Profile from "../../../public/images/icons/profile.svg";

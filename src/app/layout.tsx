@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "@next/font/local";
 import ChakraProvider from "../components/providers/ChakraProvider";
 import "./globals.css";
+import "react-day-picker/dist/style.css";
 
 const euclid = localFont({
   src: [
