@@ -7,12 +7,14 @@ interface WelcomeProps {}
 
 const Welcome = ({}: WelcomeProps) => {
   return (
-    <Box m="8">
+    <Box marginTop={"8px"} marginX={"60px"} paddingTop={"2px"}>
       <Flex align="center">
         <Image src={Hand} sizes="50px" alt="hand_logo" />
-        <Text fontWeight="bold">Hi Ahmed</Text>
+        <Text fontWeight="bold" fontSize={"20px"}>
+          Hi Ahmed
+        </Text>
       </Flex>
-      <Text fontSize="sm" marginY="1" color="gray.7 00">
+      <Text fontSize="12px" marginY="1" color="#3D3D3D">
         Welcome to your Dashboard
       </Text>
     </Box>

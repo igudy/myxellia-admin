@@ -10,30 +10,36 @@ export const secondNav = () => [
     id: "1",
     image: Home,
     name: "Dashboard",
+    border: "#F5F5F5",
   },
   {
     id: "2",
     image: Location,
     name: "Listings",
+    border: "",
   },
   {
     id: "3",
     image: Profile,
     name: "Profile",
+    border: "",
   },
   {
     id: "4",
     image: Wallet,
     name: "Wallet",
+    border: "",
   },
   {
     id: "5 ",
     image: Calendar,
     name: "Calendar",
+    border: "",
   },
   {
     id: "6 ",
     image: Settings,
     name: "Settings",
+    border: "",
   },
 ];
