@@ -21,12 +21,24 @@ interface PropertyCardProps {
 
 export const PropertyCard = ({ value, avaliability }: PropertyCardProps) => {
   return (
-    <Flex gap={"4"} w={"full"} border={"1"} borderColor={"gray.200"}>
+    <Flex
+      gap={"6"}
+      w={"full"}
+      marginX={"4"}
+      paddingY="20px"
+      border={"1px"}
+      borderRadius={"xl"}
+      alignItems={"center"}
+      justify={"center"}
+      borderColor={"gray.200"}
+    >
       <Flex direction="column" align={"center"} justify="center">
-        <Text fontSize="20px" fontWeight="bold">
+        <Text fontSize="24px" fontWeight="bold">
           {value}
         </Text>
-        <Text>{avaliability}</Text>
+        <Text color={"#606060"} fontSize={"14px"}>
+          {avaliability}
+        </Text>
       </Flex>
     </Flex>
   );

@@ -8,6 +8,8 @@ interface OverViewProps {
   imageProp: any;
   percentage: string;
   color: string;
+  subPrice: string;
+  subColor: string;
 }
 
 const OverViewProps = ({
@@ -16,6 +18,8 @@ const OverViewProps = ({
   imageProp,
   percentage,
   color,
+  subPrice,
+  subColor,
 }: OverViewProps) => {
   return (
     <Box
@@ -30,14 +34,17 @@ const OverViewProps = ({
     >
       <Text mb="10px" color={`${color}`} fontWeight="bold" fontSize="lg">
         {price}
+        <Text as={"span"} color={`${subColor}`}>
+          {subPrice}
+        </Text>
       </Text>
       <Flex fontSize="">
-        <Text fontSize="12px" fontWeight="semibold" mr="20p x">
+        <Text fontSize="12px" fontWeight="semibold" mr="10px">
           {tag}
         </Text>
 
         <Flex align="center">
-          <Image src={imageProp} alt={tag} width={20} height={20} />
+          <Image src={imageProp} alt={tag} width={17} height={17} />
           <Text fontSize="12px" ml="4px">
             {percentage}
           </Text>

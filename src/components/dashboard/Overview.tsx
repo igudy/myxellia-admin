@@ -27,9 +27,9 @@ interface OverviewProps {}
 
 const Overview = ({}: OverviewProps) => {
   return (
-    <Box padding="5" paddingY="2" marginTop="10" marginX={"10"}>
+    <Box padding="5" marginTop="2" marginX={"8"}>
       {/* Sales Overview */}
-      <Flex gap={"3"}>
+      <Flex justify={"space-between"}>
         <Box
           padding="4"
           width="850px"
@@ -40,22 +40,42 @@ const Overview = ({}: OverviewProps) => {
           <Flex justify="space-between">
             <Box>
               <Text fontWeight="bold">Sales Overview</Text>
-              <Text>Showing overview Jan 21022 - Sep 2022</Text>
+              <Text color={"#606060"} fontSize={"12px"}>
+                Showing overview Jan 2022 - Sep 2022
+              </Text>
             </Box>
-            <Box>
-              <Input
-                placeholder="View Transactions"
-                size="lg"
-                paddingRight="3.5rem"
-              />
-            </Box>
+            <Flex
+              align={"center"}
+              justify={"center"}
+              textAlign={"center"}
+              border={"1px"}
+              borderColor={"#CBCBCB"}
+              borderRadius={"xl"}
+              w={"170px"}
+              marginBottom={"3"}
+            >
+              <Text color={"#CBCBCB"} p="4" fontSize={"12px"}>
+                View Transactions
+              </Text>
+            </Flex>
           </Flex>
           <Box color="gray.600" marginY="2" fontSize="sm">
             <Flex justifyContent="flex-end" textAlign="right" ml="auto">
               <Stack direction="row" spacing="5" alignItems="center">
-                <Text>1 Week</Text>
-                <Text>1 Month</Text>
-                <Text bg="gray.300" paddingY="1" paddingX="5" rounded="full">
+                <Text color={"#3D3D3D"} fontSize={"14px"}>
+                  1 Week
+                </Text>
+                <Text color={"#3D3D3D"} fontSize={"14px"}>
+                  1 Month
+                </Text>
+                <Text
+                  color={"#3D3D3D"}
+                  fontSize={"14px"}
+                  bg="#F5F5F5 "
+                  paddingY="1"
+                  paddingX="5"
+                  rounded="full"
+                >
                   1 Year
                 </Text>
               </Stack>
@@ -68,14 +88,16 @@ const Overview = ({}: OverviewProps) => {
           <Flex align="center" gap={"2"}>
             <LineChartComponent />
             <Box>
-              <Flex>
+              <Flex marginTop={"7"}>
                 <Box>
                   <OverViewProps
                     price={"₦ 0.00"}
                     tag={"Balance"}
                     imageProp={upGreen}
                     percentage={"0%"}
-                    color={"purple"}
+                    color={"#4545FE"}
+                    subPrice={""}
+                    subColor={""}
                   />
                 </Box>
                 <Box>
@@ -84,7 +106,9 @@ const Overview = ({}: OverviewProps) => {
                     tag={"Deposit"}
                     imageProp={upGreen}
                     percentage={"0%"}
-                    color={"green"}
+                    color={"#12D8A0"}
+                    subPrice={""}
+                    subColor={""}
                   />
                 </Box>
               </Flex>
@@ -92,11 +116,13 @@ const Overview = ({}: OverviewProps) => {
                 <Box>
                   {" "}
                   <OverViewProps
-                    price={"₦ 0.00"}
+                    price={"₦ 0"}
                     tag={"Purchase"}
                     imageProp={upGreen}
                     percentage={"0%"}
-                    color={"black"}
+                    color={"#191919"}
+                    subPrice={".00"}
+                    subColor={"#CBCBCB"}
                   />
                 </Box>
                 <Box>
@@ -106,7 +132,9 @@ const Overview = ({}: OverviewProps) => {
                     tag={"Withdrawal"}
                     imageProp={upRed}
                     percentage={"0%"}
-                    color={"red"}
+                    color={"#FF6A6A"}
+                    subPrice={""}
+                    subColor={""}
                   />
                 </Box>
               </Flex>
@@ -116,24 +144,31 @@ const Overview = ({}: OverviewProps) => {
 
         {/* Property Overview */}
         <Box>
-          <Flex direction={"column"} gap={"10"}>
+          <Flex direction={"column"} gap="10" justify={"space-between"}>
             <Box
-              width={"400"}
-              minW={"400"}
+              width={"520px"}
+              minW={"520px"}
               bg="white"
               p="5"
               rounded={"lg"}
               boxShadow="lg"
             >
               <Flex justify={"space-between"}>
-                <Flex marginY={"3"} fontWeight={"bold"} gap="2 ">
+                <Flex
+                  marginBottom={"5"}
+                  fontWeight={"bold"}
+                  fontSize={"14px"}
+                  gap="2"
+                >
                   <Image src={House} alt="house" />
                   <Text>Property Overview</Text>
                 </Flex>
                 <Box>
-                  <Flex align={"center"}>
-                    <Text fontSize={"sm"}>View all</Text>
-                    <ChevronRightIcon boxSize={6} color="gray.300" />
+                  <Flex align={"center"} color={"#CBCBCB"} fontSize={"12px"}>
+                    <Text fontSize={"sm"} cursor={"pointer"}>
+                      View all
+                    </Text>
+                    <ChevronRightIcon boxSize={5} color="gray.300" />
                   </Flex>
                 </Box>
               </Flex>
@@ -147,35 +182,40 @@ const Overview = ({}: OverviewProps) => {
             </Box>
 
             {/* Customers Overview */}
-            <Box>
-              <Box
-                width={"400"}
-                minW={"400"}
-                bg="white"
-                p="5"
-                rounded={"lg"}
-                boxShadow="lg"
-              >
-                <Flex justify={"spac e-between"}>
-                  <Flex marginY={"3"} fontWeight={"bold"} gap="2 ">
-                    <Image src={Profile} alt="house" />
-                    <Text>Customers Overview</Text>
-                  </Flex>
-                  <Box>
-                    <Flex align={"center"}>
-                      <Text fontSize={"sm"}>View all</Text>
-                      <ChevronRightIcon boxSize={6} color="gray.300" />
-                    </Flex>
-                  </Box>
+            <Box
+              width={"520"}
+              minW={"520"}
+              bg="white"
+              p="5"
+              rounded={"lg"}
+              boxShadow="lg"
+            >
+              <Flex justify={"space-between"}>
+                <Flex
+                  marginBottom={"5"}
+                  fontWeight={"bold"}
+                  fontSize={"14px"}
+                  gap="2"
+                >
+                  <Image src={Profile} alt="house" />
+                  <Text>Customers Overview</Text>
                 </Flex>
                 <Box>
-                  <Flex>
-                    <PropertyCard value={"0"} avaliability="Total" />
-                    <PropertyCard value={"0"} avaliability="New" />
-                    <PropertyCard value={"0"} avaliability="A ctive" />
-                    <PropertyCard value={"0"} avaliability="Inactive" />
+                  <Flex align={"center"} color={"#CBCBCB"} fontSize={"12px"}>
+                    <Text fontSize={"sm"} cursor={"pointer"}>
+                      View all
+                    </Text>
+                    <ChevronRightIcon boxSize={5} color="gray.300" />
                   </Flex>
                 </Box>
+              </Flex>
+              <Box>
+                <Flex>
+                  <PropertyCard value={"0"} avaliability="Total" />
+                  <PropertyCard value={"0"} avaliability="New" />
+                  <PropertyCard value={"0"} avaliability="Active" />
+                  <PropertyCard value={"0"} avaliability="Inactive" />
+                </Flex>
               </Box>
             </Box>
           </Flex>
