@@ -37,7 +37,7 @@ const Assistant = () => {
           <Box>
             <Image src={Bulb} alt="bulb" />
           </Box>
-          <Text>Veerge Assistant</Text>
+          <Text cursor={"pointer"}>Veerge Assistant</Text>
           <Image src={Cancel} alt="cancel" />
         </Flex>
       </Box>
@@ -50,7 +50,7 @@ const Assistant = () => {
         justify={"center"}
         fontSize={"16px"}
       >
-        <Icon as={CiLock} />
+        <Icon as={CiLock} cursor={"pointer"} />
         End-to-end-encryption
       </Flex>
     </Box>
