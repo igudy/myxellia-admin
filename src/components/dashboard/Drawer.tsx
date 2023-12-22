@@ -8,10 +8,11 @@ import {
   DrawerOverlay,
   DrawerContent,
   DrawerCloseButton,
-  useDisclosure,
   Button,
   Input,
+  Text,
 } from "@chakra-ui/react";
+import CalendarComponent from "./CalendarComponent";
 
 interface CustomDrawerProps {
   onOpen: () => void;
@@ -40,15 +41,10 @@ const CustomDrawer: React.FC<CustomDrawerProps> = ({
           <DrawerHeader>Calendar</DrawerHeader>
 
           <DrawerBody>
-            <Input placeholder="Type here..." />
+            <CalendarComponent />
           </DrawerBody>
 
-          <DrawerFooter>
-            <Button variant="outline" mr={3} onClick={onClose}>
-              Cancel
-            </Button>
-            <Button colorScheme="blue">Save</Button>
-          </DrawerFooter>
+          <DrawerFooter></DrawerFooter>
         </DrawerContent>
       </ChakraDrawer>
     </>
