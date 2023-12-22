@@ -27,7 +27,7 @@ interface OverviewProps {}
 
 const Overview = ({}: OverviewProps) => {
   return (
-    <Box padding="5" paddingY="10" m="10">
+    <Box padding="5" paddingY="2" marginTop="10" marginX={"10"}>
       {/* Sales Overview */}
       <Flex gap={"3"}>
         <Box

@@ -1,3 +1,5 @@
+import Assistant from "@/components/dashboard/Assistant";
+import CalendarComponent from "@/components/dashboard/CalendarComponent";
 import Overview from "@/components/dashboard/Overview";
 import Welcome from "@/components/dashboard/Welcome";
 import HomeLayout from "@/components/layouts/HomeLayout";
@@ -15,6 +17,8 @@ const page = () => {
         <Welcome />
         <Overview />
       </HomeLayout>
+      {/* <CalendarComponent /> */}
+      <Assistant />
     </>
   );
 };

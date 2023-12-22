@@ -1,0 +1,28 @@
+/* dark-calendar.css */
+
+/* Custom dark mode styles */
+.rbc-calendar {
+  color: #fff; /* Set text color to white or your preferred light color */
+  background-color: #333; /* Set background color to a dark color */
+}
+
+.rbc-toolbar {
+  background-color: #444; /* Toolbar background color */
+}
+
+.rbc-header {
+  background-color: #555; /* Header background color */
+}
+
+.rbc-today {
+  background-color: #666; /* Today cell background color */
+}
+
+.rbc-event {
+  background-color: #4285f4; /* Event background color */
+  color: #fff; /* Event text color */
+}
+
+.rbc-selected-cell {
+  background-color: #4285f4; /* Selected cell background color */
+}
