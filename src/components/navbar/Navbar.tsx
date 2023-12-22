@@ -1,6 +1,8 @@
-import { Box, Container, Flex, HStack, Text } from "@chakra-ui/react";
-import Image from "next/image";
+"use client";
 import React from "react";
+import { Box, Flex, HStack, Text, useDisclosure } from "@chakra-ui/react";
+import Image from "next/image";
+import CustomDrawer from "../dashboard/Drawer";
 
 import MainStone from "../../../public/images/icons/mainstone.svg";
 import Veerge from "../../../public/images/icons/veerge.svg";
@@ -11,6 +13,8 @@ import Plus from "../../../public/images/icons/plus.svg";
 import User from "../../../public/images/icons/user.svg";
 
 const Navbar = () => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+
   return (
     <Box bg="black" color="white" paddingX="10" paddingY="5">
       <Flex justify="space-between" align="center">
@@ -36,6 +40,7 @@ const Navbar = () => {
                 width={25}
                 height={25}
                 alt="calendar"
+                onClick={onOpen}
                 className="cusor-pointer"
               />
               <Image
@@ -43,18 +48,33 @@ const Navbar = () => {
                 width={25}
                 height={25}
                 alt="notification"
+                className="cusor-pointer"
               />
             </HStack>
             <HStack spacing={2}>
               <Box marginLeft={"6"}>
-                <Image src={User} width={25} height={25} alt="user" />
+                <Image
+                  src={User}
+                  width={25}
+                  height={25}
+                  alt="user"
+                  className="cusor-pointer"
+                />
               </Box>
               <Text>Ahmed Ali</Text>
-              <Image src={Dropdown} width={20} height={20} alt="dropdown" />
+              <Image
+                src={Dropdown}
+                width={20}
+                height={20}
+                alt="dropdown"
+                className="cusor-pointer"
+              />
             </HStack>
           </Flex>
         </Box>
       </Flex>
+
+      <CustomDrawer isOpen={isOpen} onClose={onClose} onOpen={onOpen} />
     </Box>
   );
 };

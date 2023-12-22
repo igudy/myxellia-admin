@@ -26,3 +26,7 @@
 .rbc-selected-cell {
   background-color: #4285f4; /* Selected cell background color */
 }
+
+.cusor-pointer {
+  cursor: pointer;
+}

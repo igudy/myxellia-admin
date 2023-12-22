@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "@next/font/local";
 import ChakraProvider from "../components/providers/ChakraProvider";
+import "./globals.css";
 
 const euclid = localFont({
   src: [
