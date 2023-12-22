@@ -42,7 +42,6 @@ const CustomDrawer: React.FC<CustomDrawerProps> = ({
       >
         <DrawerOverlay />
         <DrawerContent>
-          <DrawerCloseButton />
           <Flex
             width="full"
             bg={"#171717"}
