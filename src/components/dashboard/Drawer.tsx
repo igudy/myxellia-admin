@@ -37,7 +37,7 @@ const CustomDrawer: React.FC<CustomDrawerProps> = ({
         <DrawerOverlay />
         <DrawerContent>
           <DrawerCloseButton />
-          <DrawerHeader>Create your account</DrawerHeader>
+          <DrawerHeader>Calendar</DrawerHeader>
 
           <DrawerBody>
             <Input placeholder="Type here..." />
