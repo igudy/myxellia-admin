@@ -144,7 +144,7 @@ const Overview = ({}: OverviewProps) => {
 
         {/* Property Overview */}
         <Box>
-          <Flex direction={"column"} gap="10" justify={"space-between"}>
+          <Flex direction={"column"} gap="12" justify={"space-between"}>
             <Box
               width={"520px"}
               minW={"520px"}

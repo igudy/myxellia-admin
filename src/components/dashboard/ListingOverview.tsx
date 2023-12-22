@@ -16,7 +16,7 @@ const ListingOverview = () => {
       <Box
         paddingX="4"
         paddingY={"1"}
-        width="450px"
+        width="500px"
         bg={"white"}
         rounded={"2xl"}
         boxShadow={"xl"}
@@ -156,7 +156,7 @@ const ListingOverview = () => {
       {/* Top Outstanding Balance */}
       <Box
         padding="4"
-        width="400px"
+        width="450px"
         bg={"white"}
         rounded={"2xl"}
         boxShadow={"xl"}

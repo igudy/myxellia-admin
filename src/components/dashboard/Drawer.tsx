@@ -11,8 +11,13 @@ import {
   Button,
   Input,
   Text,
+  Box,
+  Icon,
+  Flex,
 } from "@chakra-ui/react";
 import CalendarComponent from "./CalendarComponent";
+import { CiLock } from "react-icons/ci";
+import { IoMdClose } from "react-icons/io";
 
 interface CustomDrawerProps {
   onOpen: () => void;
@@ -38,7 +43,24 @@ const CustomDrawer: React.FC<CustomDrawerProps> = ({
         <DrawerOverlay />
         <DrawerContent>
           <DrawerCloseButton />
-          <DrawerHeader>Calendar</DrawerHeader>
+          <Flex
+            width="full"
+            bg={"#171717"}
+            justify={"space-between"}
+            alignItems={"center"}
+            color="white"
+            shadow={"lg"}
+          >
+            <Text p={"3"} fontWeight={"bold"}>
+              Calendar
+            </Text>
+            <Icon
+              as={IoMdClose}
+              boxSize={"10"}
+              onClick={onClose}
+              cursor={"pointer"}
+            />
+          </Flex>
 
           <DrawerBody>
             <CalendarComponent />

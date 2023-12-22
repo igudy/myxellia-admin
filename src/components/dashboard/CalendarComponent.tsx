@@ -4,21 +4,37 @@ import { format } from "date-fns";
 
 import { DayPicker } from "react-day-picker";
 
-const CalendarComponent: React.FC = () => {
-  const [selected, setSelected] = useState<Date>();
+/* Update the css variable */
+const css = `
 
-  let footer = <p>Please pick a day.</p>;
-  if (selected) {
-    footer = <p>You picked {format(selected, "PP")}.</p>;
+  .my-today { 
+    font-weight: bold;
+    font-size: 140%; 
+    color: blue;
   }
+
+  .DayPicker {
+    background-color: black;
+    color: white;
+  }
+`;
+
+const CalendarComponent: React.FC = () => {
+  const [selectedDay, setSelectedDay] = useState<Date[]>();
+
   return (
     <>
+      <style>{css}</style>
       <DayPicker
-        showOutsideDays
-        captionLayout="dropdown-buttons"
-        fromYear={2015}
-        toYear={2025}
-        footer={footer}
+        selected={selectedDay}
+        onSelect={setSelectedDay}
+        modifiersClassNames={{
+          selected: "my-selected",
+          today: "my-today",
+        }}
+        modifiersStyles={{
+          disabled: { fontSize: "75%" },
+        }}
       />
     </>
   );
